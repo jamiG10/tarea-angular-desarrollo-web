@@ -1,0 +1,21 @@
+<h2>Listado de Usuarios</h2>
+<div class="row">
+    @for (item of this.apiData; track $index) {
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img width="50px" src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" class="card-img-top" alt="logo.png">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">User Name: {{item.username}}</p>
+              <p class="card-text">Email: {{item.email}}</p>
+              <p class="card-text">Dirección: {{item.address.city}} - {{item.address.suite}} - {{item.address.street}}</p>
+              <p class="card-text">Empresa: {{item.company.name}}</p>
+              <a href="https://{{item.website}}" class="btn btn-primary">Web site User</a>
+            </div>
+          </div>
+          <br/>        
+    </div>
+}
+</div>
+
+  
